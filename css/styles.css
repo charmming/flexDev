@@ -5,7 +5,7 @@
   padding: 0px;
 }
 .container {
-  width: 60%;
+  width: 30%;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -18,17 +18,31 @@ body {
   padding: 0px;
 }
 .container-parent {
-  width: 60%;
+  width: 30%;
   display: flex;
   margin: auto;
   justify-content: center;
   align-content: center;
 }
+.sectionEdit {
+  padding: 10px;
+}
 .container-parent {
   border: 1px #ccc solid;
   padding: 10px;
   flex-direction: column;
+  transform: translate(0, 50%);
 }
 header {
   background: yellow;
+  padding: 10px;
+  text-align: center;
+}
+.firstSection {
+  background: black;
+  color: white;
+  padding: 10px;
+}
+.secondSection {
+  padding: 10px;
 }

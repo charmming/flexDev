@@ -2,7 +2,7 @@
 @background-color: #f3f3f3;
 @primary-color: yellow;
 @secondary-color: black;
-@width: 80%;
+@width: 30%; 
 
 .page {
     text-decoration: none;
@@ -27,12 +27,29 @@ body {
     .container();
 }
 
+.sectionEdit{
+    padding: 10px;
+}
+
 .container-parent {
     border: 1px #ccc solid;
     padding: 10px;
     flex-direction: column;
+    transform: translate(0, 50%);
 }
 
 header{
     background: @primary-color;
+    padding: 10px;
+    text-align: center;
+}
+
+.firstSection {
+    background: @secondary-color;
+    color: white;
+    .sectionEdit();
+}
+
+.secondSection{
+    .sectionEdit();
 }
