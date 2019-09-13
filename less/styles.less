@@ -4,6 +4,21 @@
 @secondary-color: black;
 @width: 30%; 
 
+@media only screen and (max-width: 780px) {
+    .container-parent {
+        width: 50%;
+        padding: 5px;
+        transform: translate(0, 30%);
+        text-align: center;
+    }
+
+    header{
+        background: @primary-color;
+        padding: 2px;
+        text-align: center;
+    }
+  }
+
 .page {
     text-decoration: none;
     list-style: none;
