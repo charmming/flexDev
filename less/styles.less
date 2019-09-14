@@ -1,70 +1,134 @@
-// variables
-@background-color: red;
-@primary-color: yellow;
-@secondary-color: black;
-@width: 30%; 
+//variables
+@background-color: #f3f3f3;
+@foreground-color: yellow;
+@primary-color: black;
+@customize-color: black;
+@button-background: yellow;
+@button-color: black;
+@button-padding: 5px;
+@button-margin: 5px;
 
-@media only screen and (max-width: 780px) {
-    .container-parent {
-        width: 50%;
-        padding: 5px;
-        transform: translate(0, 30%);
-        text-align: center;
-    }
-
-    header{
-        background: @primary-color;
-        padding: 2px;
-        text-align: center;
-    }
-  }
-
-.page {
-    text-decoration: none;
-    list-style: none;
+.pageStyling{
     margin: 0px;
     padding: 0px;
+    list-style: none;
+    a {
+        color: @foreground-color;
+    }
 }
 
-.container {
-    width: @width;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-content: center;
+button {
+    margin: @button-margin;
+    padding: @button-padding;
+    color: @button-color;
+    background: @button-background;    
+    border-radius: 10%;
 }
 
-body {
-    .page();
-}
-
-.container-parent{
-    .container();
-}
-
-.sectionEdit{
-    padding: 10px;
-}
-
-.container-parent {
-    border: 1px #ccc solid;
-    padding: 10px;
-    flex-direction: column;
-    transform: translate(0, 50%);
-}
-
-header{
-    background: @primary-color;
-    padding: 10px;
+.headerStyle{
+    background-color: @background-color;
     text-align: center;
 }
 
-.firstSection {
-    background: @secondary-color;
-    color: white;
-    .sectionEdit();
+.sectionStyle{
+    text-align: justify;
+    margin: 0px auto;
+    padding: 5px;
+    margin: 5px;
 }
 
-.secondSection{
-    .sectionEdit();
+@media only screen and (max-width: 320px){
+    *{
+        .pageStyling();
+    }
+
+    header{
+        .headerStyle();
+        background-color: @foreground-color;
+        margin: 5px;
+    }
+
+    .firstSection {
+        background-color: @primary-color;
+        .sectionStyle();
+        color: white;
+    }
+
+    .secondSection {
+        .sectionStyle();
+    }
+
+    .container-parent{
+        border: solid 2px black;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    *{
+        .pageStyling();
+    }
+
+    .container-parent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 40%;
+        margin: 0px auto;
+        transform: translate(0, 60%);
+        border: solid 2px black;
+    }
+
+    header{
+        .headerStyle();
+        background-color: @foreground-color;
+        margin: 5px;
+    }
+
+    .firstSection {
+        background-color: @primary-color;
+        .sectionStyle();
+        color: white;
+    }
+
+    .secondSection {
+        .sectionStyle();
+    }
+
+}
+
+
+@media only screen and (min-width: 1280px){
+    *{
+        .pageStyling();
+    }
+
+    .container-parent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 30%;
+        margin: 0px auto;
+        transform: translate(0, 60%);
+        border: solid 2px black;
+    }
+
+    header{
+        .headerStyle();
+        background-color: @foreground-color;
+        margin: 0px;
+        padding: 10px;
+    }
+
+    .firstSection {
+        background-color: @primary-color;
+        .sectionStyle();
+        color: white;
+    }
+
+    .secondSection {
+        .sectionStyle();
+    }
+
 }
